@@ -1,0 +1,79 @@
+/* this is where all of your CSS styles go */
+
+.border {
+	width: 800px;
+	height: 1200px;
+	border: 1px solid black;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+
+.background {
+	width: 800px;
+	height: 1200px;
+	background: url(../images/background.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.circle {
+	width: 900px;
+	height: 902px;
+	background: #f6eac4;
+	border-radius: 100%;
+	position: absolute;
+	top: 46%;
+	left: -2%;
+	transform: translate(-50%, -50%)
+}
+
+.rocket {
+  width: 660px;
+  height: 650px;
+  background: url(../images/rocket.svg) no-repeat center;
+  position: absolute;
+  top: 40%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  transition: 2s;
+  animation: shake .8s infinite, flyup 2s cubic-bezier(.2, 0.1, .3, 1.55) forwards 3s;
+}
+
+.border:hover .rocket {
+	top: 154%;
+	transition: 2s;
+}
+
+@keyframes shake {
+ 0%, 100% { transform: translate(-50%, -50%); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-50.3%, -50%); }
+  20%, 40%, 60%, 80% { transform: translate(-49.7%, -50%); }
+
+}
+
+@keyframes flyup {
+  0% { transform: translate(-50%, -50%); }
+  100% { transform: translate(-50%, -200%); }
+}
+
+@font-face {
+	font-family: 'RobotoFlex';
+	src:url(../fonts/RobotoFlex.ttf)
+}
+
+.title {
+	font-family: RobotoFlex;
+	font-size: 84px;
+	font-variation-settings: 'wght' 500, 'wdth' 10, 'opsz' 50, 'YTLC' 500;
+	color: #e8453e;
+	position: absolute;
+	left: 4%;
+	bottom: 36%;
+	letter-spacing: 8.5px;
+
+}
+
+
+
